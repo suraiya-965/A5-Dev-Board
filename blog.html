@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- daisy ui and tailwind css -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<!-- google font -->
+    <!-- google font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<style>
+    .font-poppins{
+        font-family: "Poppins", sans-serif;
+    }
+</style>
+
+</head>
+<body class="font-poppins  bg-blue-100 pb-10">
+     <header class="md:container mx-auto pb-10">
+    <nav class="pt-10">
+        <div class="navbar bg-base-100 shadow-sm rounded-lg">
+  <div class="flex-1">
+    
+    <div class="flex p-2">
+        <img src="assets/logo.png" alt="">
+        <a class="btn btn-ghost text-3xl gap-0 font-thin">Dev<span class="font-bold">Board</span></a>
+    </div>
+  </div>
+  <div class="pl-4 pr-4 bg-blue-100 rounded-2xl">
+  
+  </div>
+  <div class="pl-10 pr-10">
+ <button class="btn btn-primary">Back to desk</button>
+  </div>
+</div>
+    </nav>
+</header>
+<main class="">
+    <!-- question:1 -->
+<section class="md:container mx-auto p-5  bg-white rounded-lg ">
+    <div class=" pb-5">
+        <p class=" border-b-3 border-dashed border-gray-400 font-bold">
+            Question-1:what are the different ways to select an element in the DOM?
+
+        </p>
+        <p class="text-xs ">
+            In JavaScript, there are several ways to select elements from the DOM, each serving different purposes. The getElementById() method is used to select a single element by its unique id. If you need to select elements by their class name, you can use getElementsByClassName(), which returns a collection of all matching elements. Similarly, getElementsByTagName() allows you to select elements based on their tag name, such as div or p. For more flexibility, querySelector() can be used to select the first element that matches a given CSS selector, while querySelectorAll() selects all matching elements and returns them as a NodeList. Additionally, the getElementsByName() method selects elements based on their name attribute, which is commonly used in form inputs. These methods are essential for interacting with and manipulating HTML elements dynamically through JavaScript.
+        </p>
+
+</section>
+<!-- question:2 -->
+<section class="md:container mx-auto p-5  bg-white rounded-lg mt-5">
+    <div class=" pb-5">
+        <p class=" border-b-3 border-dashed border-gray-400 font-bold">
+            Question-2: What is the difference between innerHTML, innerText, and textContent ?
+        </p>
+        <p class="text-xs ">
+            The properties innerHTML, innerText, and textContent are all used in JavaScript to access or modify the content of DOM elements, but they serve different purposes. innerHTML allows us to get or set the HTML content of an element, including any tags inside it. This means if the content contains HTML elements like b or span, they will be processed and rendered as part of the content. On the other hand, innerText deals only with the visible text, taking into account the CSS styles that might hide content (like display: none), and it does not return any HTML tags. It focuses on what we actually see on the screen. Meanwhile, textContent retrieves all the text within an element, including hidden elements, and ignores any HTML tags. It returns everything as plain text and is generally faster than innerText. While innerHTML is useful for inserting or retrieving HTML structure, innerText is good for visible content, and textContent is best when we want all the text regardless of how it’s displayed.
+        </p>
+
+</section>
+<!-- question:3 -->
+<section class="md:container mx-auto p-5  bg-white rounded-lg mt-5">
+    <div class=" pb-5">
+        <p class=" border-b-3 border-dashed border-gray-400 font-bold">
+             Question-3: What is event delegation in the DOM?
+
+        </p>
+        <p class="text-xs ">
+            Event delegation is a technique where we add an event listener to a parent element instead of each child. It works because events bubble up through the DOM. This allows us to handle events from multiple child elements efficiently, even if they are added dynamically.
+        </p>
+
+</section>
+<!-- question:4 -->
+<section class="md:container mx-auto p-5  bg-white rounded-lg mt-5 ">
+    <div class=" pb-5">
+        <p class=" border-b-3 border-dashed border-gray-400 font-bold">
+            Question-4: What is event bubbling in the DOM?
+
+        </p>
+        <p class="text-xs ">
+            Event bubbling is a behavior in the DOM where an event starts from the target (child) element and then bubbles up to its parent, then the grandparent, and so on up to the root (<html>).
+
+For example, if we click a button inside a div, the click event will first trigger on the button, then on the div, and continue up the DOM tree. This allows parent elements to listen for events happening on their child elements. Event bubbling is the foundation for techniques like event delegation.
+
+</section>
+<!-- question:5 -->
+<section class="md:container mx-auto p-5  bg-white rounded-lg mt-5">
+    <div class=" pb-5">
+        <p class=" border-b-3 border-dashed border-gray-400 font-bold">
+            Question-5: How do you create, add, and remove elements using JavaScript?
+
+
+        </p>
+        <p class="text-xs ">
+            In JavaScript, we can create, add, and remove elements in the DOM using built-in methods. Here's a short explanation of each step:<br><br> <br>
+            We use document.createElement() to create a new element.<br>
+            const newDiv = document.createElement("div");
+newDiv.textContent = "Hello!";<br> <br>
+            We can add the new element to the DOM using appendChild() or append().<br>
+            document.body.appendChild(newDiv);<br> <br>
+            We remove an element using remove() or removeChild().<br>
+            newDiv.remove(); 
+
+        </p>
+
+</section>
+</main>
+</body>
+</html>
